@@ -1,0 +1,1 @@
+# Pokemon-Emerald-100-
