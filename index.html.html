@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokémon Emerald — คู่มือบทสรุป 100%</title>
+<meta name="description" content="Pokémon Emerald Complete 100% Guide — Main Story, Legendary, Post-game, Battle Frontier, Contest และ Checklist">
+<style>
+:root{
+  --bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#687386;--line:#e3e8f0;
+  --primary:#2f6fed;--primary2:#5b8def;--green:#19a974;--yellow:#f2b01e;
+  --red:#e05252;--shadow:0 10px 30px rgba(27,45,80,.08);--radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Thai",Tahoma,sans-serif;line-height:1.75}
+a{color:inherit}
+.hero{background:linear-gradient(135deg,#1d4ed8,#3b82f6 55%,#60a5fa);color:#fff;padding:42px 20px 70px}
+.hero-inner{max-width:1180px;margin:auto}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:999px;font-size:13px}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:15px 0 8px}
+.hero p{margin:0;opacity:.9;font-size:17px}
+.layout{max-width:1180px;margin:-35px auto 50px;padding:0 16px;display:grid;grid-template-columns:260px 1fr;gap:22px}
+.sidebar{position:sticky;top:16px;align-self:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;max-height:calc(100vh - 32px);overflow:auto}
+.sidebar h3{margin:0 0 10px;font-size:15px}
+.sidebar a{display:block;text-decoration:none;color:var(--muted);font-size:13px;padding:6px 8px;border-radius:9px}
+.sidebar a:hover{background:#eef4ff;color:var(--primary)}
+.search{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:10px;font-size:14px}
+.content{min-width:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:25px;margin-bottom:20px}
+.cover-card{margin-bottom:20px}
+h2{font-size:27px;margin:0 0 15px;line-height:1.35}
+h3{font-size:20px;margin:25px 0 10px}
+h4{font-size:16px;margin:18px 0 7px}
+hr{border:0;border-top:1px solid var(--line);margin:25px 0}
+.lead{font-size:17px;color:#39465b}
+.goal{background:#f0f6ff;border-left:4px solid var(--primary);padding:13px 16px;border-radius:10px;margin:15px 0}
+.tip{background:#fff8df;border-left:4px solid var(--yellow);padding:13px 16px;border-radius:10px;margin:15px 0}
+.warn{background:#fff0f0;border-left:4px solid var(--red);padding:13px 16px;border-radius:10px;margin:15px 0}
+.success{background:#edfbf5;border-left:4px solid var(--green);padding:13px 16px;border-radius:10px;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mini{background:#f8fafc;border:1px solid var(--line);padding:14px;border-radius:13px}
+.mini strong{display:block;margin-bottom:3px}
+ul{padding-left:23px}
+.route{font-weight:700;color:var(--primary);background:#f4f7ff;border-radius:10px;padding:10px 13px;display:block;margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left}
+th{background:#f5f7fb}
+.checklist label{display:block;padding:7px 4px;border-bottom:1px dashed var(--line);cursor:pointer}
+.checklist input{margin-right:9px;accent-color:var(--green)}
+.progress-wrap{background:#e8edf5;border-radius:999px;height:12px;overflow:hidden;margin:10px 0}
+.progress{height:100%;background:linear-gradient(90deg,var(--primary),#63a4ff);width:0%;transition:.25s}
+.progress-text{font-size:13px;color:var(--muted)}
+footer{text-align:center;color:var(--muted);padding:25px}
+.hidden{display:none!important}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:relative;top:auto;max-height:none}
+}
+
+.map-panel{margin:18px 0 24px;border:1px solid var(--line);border-radius:16px;background:#f8fafc;overflow:hidden}
+.map-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 15px;background:#f1f5f9}
+.map-head strong{font-size:15px}.map-tag{font-size:12px;color:var(--primary);background:#eaf1ff;padding:4px 9px;border-radius:999px}
+.map-panel img{display:block;width:100%;max-height:620px;object-fit:contain;background:#101828}
+.map-caption{padding:11px 15px;color:var(--muted);font-size:13px}
+.map-focus{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;padding:0 15px 15px}
+.focus{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:13px}.focus b{color:var(--primary);display:block}
+.map-link{display:inline-block;margin-top:5px;color:var(--primary);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="badge">COMPLETE GUIDE • 100%</span>
+    <h1>Pokémon Emerald<br>คู่มือบทสรุป 100%</h1>
+    <p>Main Story → 8 Badges → Pokémon League → National Pokédex → Legendary → Post-game → Battle Frontier → Contest</p>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <input id="search" class="search" placeholder="ค้นหาเนื้อหา เช่น Rayquaza, Gym, Fossil">
+  <h3>สารบัญ</h3>
+  <nav id="toc">
+    <a href="#part1">Part 1 — จุดเริ่มต้น → Fortree</a>
+    <a href="#part2">Part 2 — Fortree → Lilycove</a>
+    <a href="#part3">Part 3 — Mt. Pyre → Magma Hideout</a>
+    <a href="#part4">Part 4 — Mossdeep City</a>
+    <a href="#part5">Part 5 — Seafloor Cavern → Kyogre</a>
+    <a href="#part6">Part 6 — Sootopolis City</a>
+    <a href="#part7">Part 7 — Ever Grande → Victory Road</a>
+    <a href="#part8">Part 8 — Pokémon League</a>
+    <a href="#part9">Part 9 — Post-game</a>
+    <a href="#part10">Part 10 — Legendary Pokémon</a>
+    <a href="#part11">Part 11 — Pokémon เพิ่มเติม</a>
+    <a href="#part12">Part 12 — Special Legendary</a>
+    <a href="#part13">Part 13 — Battle Frontier</a>
+    <a href="#part14">Part 14 — Pokémon Contest</a>
+    <a href="#part15">Part 15 — Secret Base</a>
+    <a href="#part16">Part 16 — Mirage Island</a>
+    <a href="#part17">Part 17 — Berry & Pokéblock</a>
+    <a href="#part18">Part 18 — Trainer Rematch</a>
+    <a href="#part19">Part 19 — Pokédex 100%</a>
+    <a href="#final">Final Checklist</a>
+  </nav>
+</aside>
+
+<main class="content">
+
+<section class="card cover-card">
+  <h2>🎮 วิธีใช้คู่มือนี้</h2>
+  <p class="lead">คู่มือนี้จัดลำดับการเล่นตั้งแต่เริ่มเกมจนถึง Post-game โดยเน้นการเก็บของสำคัญและเป้าหมายแบบ 100% สามารถใช้ช่องค้นหาด้านซ้ายและ Checklist ด้านล่างเพื่อเช็กความคืบหน้าได้</p>
+  <div class="grid">
+    <div class="mini"><strong>🗺️ Main Story</strong>เส้นทางและเหตุการณ์สำคัญตามลำดับ</div>
+    <div class="mini"><strong>🏅 8 Badges</strong>Gym Leader ครบทั้ง 8 แห่ง</div>
+    <div class="mini"><strong>🐉 Legendary</strong>Legendary และพื้นที่พิเศษ</div>
+    <div class="mini"><strong>🏆 Post-game</strong>Battle Frontier, Contest และ Pokédex</div>
+  </div>
+</section>
+
+<section class="card searchable">
+<h2>🗺️ Map Center — แผนที่สำหรับเดินตาม</h2>
+<p class="lead">เพิ่มแผนที่ประกอบในจุดที่มีทางแยกหรือถ้ำซับซ้อน เพื่อให้เปิดคู่มือแล้วดู “ต้องไปทางไหน / จุดสำคัญอยู่ตรงไหน” ได้ทันที</p>
+<div class="grid">
+<div class="mini"><strong>🌏 Hoenn World Map</strong>ภาพรวมตำแหน่งเมืองและเส้นทางทั่ว Hoenn<br><a class="map-link" href="https://gamefaqs.gamespot.com/gba/921905-pokemon-emerald-version/map/12885-hoenn-region-map" target="_blank" rel="noopener">เปิดแผนที่เต็ม ↗</a></div>
+<div class="mini"><strong>🔎 Interactive Map</strong>ค้นหา Item, Hidden Item, Trainer, Entrance และจุดสำคัญ<br><a class="map-link" href="https://pkmnmap.com/Maps/Emerald/" target="_blank" rel="noopener">เปิด Interactive Map ↗</a></div>
+</div>
+<div class="success">💡 ในแต่ละจุดสำคัญด้านล่างจะมี “Map + Focus Point” เพิ่มเข้ามา โดยเน้นถ้ำและพื้นที่ที่หลงทางได้ง่าย</div>
+</section>
+
+<section id="part1" class="card searchable">
+<h2>Part 1 — จุดเริ่มต้น → Fortree City</h2>
+<h3>1. Littleroot Town</h3>
+<div class="goal"><b>🎯 เป้าหมาย:</b> รับ Pokémon ตัวแรก, รับ Pokédex และเริ่มออกเดินทาง</div>
+<p>เริ่มเกมที่บ้านของเราใน Littleroot Town ขึ้นไปชั้น 2 สำรวจคอมพิวเตอร์เพื่อรับ <b>Potion</b> จากนั้นสำรวจนาฬิกาเพื่อกำหนดเวลาในเกม แล้วลงมาชั้น 1 และออกจากบ้าน</p>
+<h4>🏠 บ้านของคู่แข่ง</h4>
+<p>เข้าไปในบ้านทางขวา ขึ้นไปชั้น 2 และคุยกับตัวละครที่กำลังใช้คอมพิวเตอร์</p>
+<ul><li>เล่นเป็น Brendan → พบ May</li><li>เล่นเป็น May → พบ Brendan</li></ul>
+<h4>🧪 ช่วย Professor Birch</h4>
+<p>ขึ้นเหนือเมือง จะพบ Professor Birch ถูก Pokémon ป่าไล่โจมตี สำรวจกระเป๋าแล้วเลือก Starter 1 ตัว</p>
+<table><tr><th>Pokémon</th><th>ประเภท</th><th>คำแนะนำ</th></tr><tr><td>Treecko</td><td>Grass 🌿</td><td>เน้นความเร็ว</td></tr><tr><td>Torchic</td><td>Fire 🔥</td><td>มี Fire/Fighting ในช่วงกลางเกม</td></tr><tr><td>Mudkip</td><td>Water 💧</td><td>⭐ แนะนำสำหรับการเล่นง่าย</td></tr></table>
+<p>Starter เริ่มที่ Level 5 และใช้ต่อสู้กับ Pokémon ที่กำลังไล่ Professor Birch</p>
+
+<h3>2. Route 101 → Oldale Town</h3>
+<p>เดินผ่าน Route 101 ไป Oldale Town แล้วขึ้นเหนือไป Route 103</p>
+<h4>⚔️ Rival Battle #1</h4>
+<p>พบคู่แข่งที่ Route 103 และต่อสู้กับ Starter ที่ได้เปรียบ Starter ของเรา เมื่อชนะให้กลับไป Littleroot Town</p>
+
+<h3>3. Littleroot Town — รับ Pokédex</h3>
+<p>กลับไปห้องทดลอง Professor Birch เพื่อรับ <b>Pokédex</b> และคู่แข่งจะมอบ <b>Poké Ball ×5</b> แนะนำให้จับ Pokémon เพิ่ม 2–3 ตัวก่อนออกเดินทาง</p>
+
+<h3>4. Route 102 → Petalburg City</h3>
+<p>เดินผ่าน Route 102 ไป Petalburg City ซึ่งเป็นบ้านของ Norman Gym Leader คนที่ 5</p>
+<div class="warn"><b>🔒 Petalburg Gym:</b> ยังไม่สามารถท้าสู้ Norman ได้ในตอนนี้</div>
+<p>ที่ Gym จะพบ Wally และเกิดเหตุการณ์สอนระบบจับ Pokémon จากนั้นเดินทางต่อไปทางตะวันตก</p>
+
+<h3>5. Route 104 → Petalburg Woods</h3>
+<p>ผ่าน Route 104 เข้า Petalburg Woods พบ Team Aqua Grunt ข่มขู่ชายจาก Devon Corporation เอาชนะให้ได้ แล้วรับ <b>Great Ball</b></p>
+
+<h3>6. Rustboro City</h3>
+<ul><li>🌳 รับ <b>TM09 — Bullet Seed</b> จาก NPC ใกล้ต้นไม้</li><li>✂️ รับ <b>HM01 — Cut</b> จาก Cutter’s House</li><li>🏟️ Roxanne — Rock Gym → <b>Stone Badge</b> + <b>TM39 Rock Tomb</b></li></ul>
+<div class="tip">เมื่อมี Stone Badge แล้วจึงใช้ Cut นอกการต่อสู้ได้</div>
+
+<h3>7. Route 116 → Rusturf Tunnel</h3>
+<p>ออก Rustboro ทางตะวันออก ผ่าน Route 116 และ Rusturf Tunnel เอาชนะ Team Aqua Grunt เพื่อช่วย Peeko จากนั้นกลับไปหา Mr. Briney เพื่อปลดล็อกการเดินทางด้วยเรือ</p>
+
+<h3>8. Dewford Town</h3><div class="map-panel"><div class="map-head"><strong>Granite Cave — แผนที่ภายในถ้ำ</strong><span class="map-tag">NAVIGATION</span></div><img src="https://www.guiasnintendo.com/1_GAMEBOY_ADVANCE/Pokemon_Esmeralda/pok_esmeralda_SP/mapas/12_granite_cave.jpg" alt="Granite Cave — แผนที่ภายในถ้ำ map"><div class="map-caption">ใช้ดูตำแหน่งทางแยกภายใน Granite Cave และทางออก Route 106<br><a class="map-link" href="https://www.guiasnintendo.com/1_GAMEBOY_ADVANCE/Pokemon_Esmeralda/pok_esmeralda_SP/mapas/12_granite_cave.html" target="_blank" rel="noopener">ดูแหล่งที่มาของแผนที่ ↗</a></div><div class="map-focus"><div class="focus"><b>A</b>ทางเข้า/จุดเริ่ม</div><div class="focus"><b>B–H</b>จุดเชื่อมต่อภายในถ้ำ</div><div class="focus"><b>Steven</b>เป้าหมายสำคัญของเนื้อเรื่อง</div></div></div>
+<ul><li>🎣 รับ <b>Old Rod</b> จากชาวประมงใกล้ Gym</li><li>🕯️ Granite Cave — รับ <b>HM05 Flash</b> และพบ Steven เพื่อส่งจดหมาย</li><li>รับ <b>TM47 Steel Wing</b> จาก Steven</li><li>🏟️ Brawly — Fighting Gym → <b>Knuckle Badge</b> + <b>TM08 Bulk Up</b></li></ul>
+
+<h3>9. Route 109 → Slateport City</h3>
+<p>กลับหา Mr. Briney เลือก Slateport City ผ่าน Route 109 และ Slateport Beach แนะนำให้เก็บไอเทมบนชายหาดให้ครบ</p>
+
+<h3>10. Slateport City</h3>
+<p>ไป Stern’s Shipyard คุยกับ Dock แล้วตามหา Captain Stern ใน Oceanic Museum ขึ้นชั้น 2 และเอาชนะ Team Aqua Grunts</p>
+
+<h3>11. Route 110 → Mauville City</h3>
+<p>ออก Slateport ทางเหนือ ผ่าน Route 110 และพบคู่แข่ง</p>
+<h4>⚔️ Rival Battle #2</h4><p>ชนะคู่แข่งแล้วรับไอเทมสำหรับค้นหาไอเทมที่ซ่อนอยู่ จากนั้นเดินทางต่อ Mauville</p>
+
+<h3>12. Mauville City</h3>
+<ul><li>🚲 รับ Bicycle ฟรี และภายหลังเลือก Mach Bike / Acro Bike ได้</li><li>🎰 รับ Coin Case จากบ้านใกล้ Game Corner</li><li>🪨 รับ <b>HM06 Rock Smash</b></li><li>🏡 Pokémon Day Care</li><li>⚔️ Wally Battle หน้า Gym</li><li>🏟️ Wattson — Electric Gym → <b>Dynamo Badge</b> + <b>TM34 Shock Wave</b></li></ul>
+
+<h3>13. Route 117 → Verdanturf Town</h3><div class="map-panel"><div class="map-head"><strong>Rusturf Tunnel — แผนที่เส้นทาง</strong><span class="map-tag">ROUTE</span></div><img src="https://eternalplayers.wordpress.com/wp-content/uploads/2015/01/rusturf_tunnel_e.png?w=584" alt="Rusturf Tunnel — แผนที่เส้นทาง map"><div class="map-caption">ใช้ดูทางเชื่อมระหว่าง Rustboro / Route 116 / Verdanturf และจุดที่ต้องใช้ Rock Smash<br><a class="map-link" href="https://eternalplayers.wordpress.com/2015/01/31/gba-pokemon-emerald-analise-detonado-dicas-segredos/" target="_blank" rel="noopener">ดูแหล่งที่มาของแผนที่ ↗</a></div><div class="map-focus"><div class="focus"><b>เข้า Rusturf Tunnel</b>จาก Route 116</div><div class="focus"><b>Rock Smash</b>เปิดทางผ่านก้อนหิน</div><div class="focus"><b>HM04 Strength</b>รับหลังเปิดทางให้คนสองคนกลับมาอยู่ด้วยกัน</div></div></div>
+<p>ผ่าน Route 117 ไป Verdanturf และใช้ Rock Smash ใน Rusturf Tunnel หลังได้ Dynamo Badge เพื่อเปิดทาง แล้วรับ <b>HM04 Strength</b></p>
+
+<h3>14. Route 111 → Route 112 → Fiery Path</h3>
+<p>ทะเลทรายยังผ่านไม่ได้เพราะพายุทราย เดินต่อ Route 112 พบกระเช้าที่ Team Magma ขวางอยู่ แล้วใช้ Fiery Path เป็นทางอ้อม</p>
+
+<h3>15. Route 113 → Fallarbor Town</h3>
+<ul><li>🧑‍💻 พบ Lanette ที่ Pokémon Center แล้วเธอกลับบ้านที่ Route 114</li><li>⛏️ รับ <b>TM28 Dig</b></li><li>📢 รับ <b>TM05 Roar</b></li></ul>
+
+<h3>16. Route 114 → Meteor Falls</h3>
+<p>เดินผ่าน Route 114 เข้า Meteor Falls พบ Team Magma และ Team Aqua เผชิญหน้ากันเรื่อง Meteorite แล้วเดินทางต่อ Mt. Chimney</p>
+
+<h3>17. Mt. Chimney → Lavaridge Town</h3>
+<p>เมื่อ Team Magma เปิดทาง ใช้ Cable Car ขึ้นยอดเขา เอาชนะสมาชิก Team Magma และจบเหตุการณ์ Meteorite จากนั้นลงผ่าน Jagged Pass ไป Lavaridge Town</p>
+
+<h3>18. Lavaridge Town</h3>
+<ul><li>♨️ Hot Spring — รับ <b>Wynaut Egg</b> จากหญิงชรา โดยต้องมีช่องว่างในทีม</li><li>🏟️ Flannery — Fire Gym → <b>Heat Badge</b> + <b>TM50 Overheat</b></li></ul>
+<p>เมื่อมี Heat Badge แล้วจึงใช้ Strength นอกการต่อสู้ได้</p>
+
+<h3>19. Route 111 — Desert & Mirage Tower</h3>
+<p>หลังได้ Heat Badge สามารถเข้า Desert ได้ สำรวจ Mirage Tower และเลือก Fossil 1 ชิ้นจาก <b>Root Fossil</b> หรือ <b>Claw Fossil</b></p>
+<div class="tip"><b>100% Tip:</b> Fossil อีกชิ้นยังตามหาได้ภายหลังหลังจบเนื้อเรื่องหลัก</div>
+
+<h3>20. Rustboro City — ฟื้น Fossil & Exp. Share</h3>
+<p>นำ Fossil ไป Devon Corporation เพื่อฟื้น Pokémon และกลับมารับภายหลัง จากนั้นขึ้นชั้นบนคุยกับ Mr. Stone เพื่อรับ <b>Exp. Share</b></p>
+
+<h3>21. Petalburg City — Gym แห่งที่ 5</h3>
+<p>กลับไป Petalburg Gym และเอาชนะ <b>Norman</b> → <b>Balance Badge</b> + <b>TM42 Facade</b></p>
+
+<h3>22. รับ HM03 — Surf</h3>
+<p>ไปบ้าน Wally ใกล้ Gym คุยกับพ่อของ Wally เพื่อรับ <b>HM03 Surf</b> ซึ่งจะเปิดเส้นทางน้ำจำนวนมาก</p>
+
+<h3>23. Route 118 → Route 119</h3>
+<p>ใช้ Surf ไปทางตะวันออก ผ่าน Route 118 และ Route 119 จนถึง Weather Institute</p>
+
+<h3>24. Weather Institute</h3>
+<p>เอาชนะ Team Aqua ภายในอาคารและหัวหน้าที่อยู่ชั้นบน หลังจบเหตุการณ์นักวิทยาศาสตร์จะมอบ <b>Castform</b></p>
+
+<h3>25. Rival Battle → HM02 Fly</h3>
+<p>ออกจาก Weather Institute ขึ้นเหนือ พบคู่แข่งและรับ <b>HM02 Fly</b> หลังชนะ</p>
+<div class="tip">ต้องมี Feather Badge จึงจะใช้ Fly นอกการต่อสู้ได้</div>
+
+<h3>26. Fortree City</h3>
+<p>Gym ยังเข้าไม่ได้ ให้ไปบริเวณสะพานทางตะวันออกเฉียงใต้ พบ Steven และใช้ <b>Devon Scope</b> เปิดเผย Kecleon จากนั้นกลับเข้า Gym</p>
+<p>🏟️ <b>Winona — Flying Gym</b> → <b>Feather Badge</b> + <b>TM40 Aerial Ace</b></p>
+</section>
+
+<section id="part2" class="card searchable">
+<h2>Part 2 — Fortree City → Lilycove City</h2>
+<h3>1. Route 120</h3>
+<p>กลับมาบริเวณสะพาน พบ Kecleon อีกตัว ใช้ Devon Scope แล้วเดินต่อไปทางตะวันออก ผ่าน Scorched Slab</p>
+<p>🔥 <b>Scorched Slab:</b> เก็บ <b>TM11 Sunny Day</b></p>
+<h3>2. Route 121</h3>
+<p>พบ Team Aqua มุ่งหน้า Mt. Pyre แต่ยังไม่จำเป็นต้องตามทันที เดินต่อไปทางตะวันออก ผ่านทางแยก Safari Zone / Mt. Pyre / Lilycove</p>
+<div class="tip">ก่อนเข้า Lilycove แนะนำให้แวะ Safari Zone เพื่อเก็บ Pokémon ที่พบเฉพาะพื้นที่</div>
+<h3>3. Lilycove City</h3>
+<p>สำรวจ Pokémon Center, Department Store, Contest Hall, Museum, Safari Zone และบ้าน NPC ต่าง ๆ</p>
+<p>🛍️ Department Store: เตรียม Poké Ball, Great Ball, Ultra Ball, Super Repel และไอเทมรักษา</p>
+<h4>⚔️ Rival Battle</h4><p>พบคู่แข่งบริเวณทางเหนือของเมืองและเอาชนะให้ได้</p>
+<h3>4. Safari Zone</h3>
+<p>ใช้ Safari Ball, Bait และ Rock แทนการต่อสู้แบบปกติ สำรวจพื้นที่และเก็บ Pokémon/ไอเทมให้ครบ</p>
+</section>
+
+<section id="part3" class="card searchable">
+<h2>Part 3 — Mt. Pyre → Team Magma Hideout</h2>
+<h3>5. Mt. Pyre</h3>
+<p>จาก Route 121 ใช้ Surf ลงใต้เข้าสู่ Route 122 แล้วเข้า Mt. Pyre เดินขึ้นไปด้านบน พบ Team Aqua และเหตุการณ์ Red Orb</p>
+<div class="warn"><b>สำคัญ:</b> เก็บ Magma Emblem ตามเหตุการณ์ไว้ เพราะใช้เข้า Team Magma Hideout</div>
+<h3>6. Team Magma Hideout</h3>
+<p>เข้าสู่ฐาน Team Magma สำรวจทางวาร์ปและตามหา <b>Maxie</b> เอาชนะเขา แล้วกลับ Slateport City</p>
+<h3>7. Slateport City — Oceanic Museum</h3>
+<p>ไปท่าเรือ พบ Team Aqua ขโมยเรือดำน้ำ จากนั้นหนีไป Lilycove</p>
+<h3>8. Lilycove — Team Aqua Hideout</h3>
+<p>เข้า Hideout ทางตะวันออกของเมือง สำรวจระบบวาร์ปและตามหาเรือดำน้ำ</p>
+<div class="warn">หลังเหตุการณ์นี้ไม่สามารถเข้า Team Aqua Hideout ได้ตามเดิม ควรเก็บไอเทมที่ต้องการก่อนออก</div>
+</section>
+
+<section id="part4" class="card searchable">
+<h2>Part 4 — Mossdeep City</h2>
+<h3>9. Route 124 → Mossdeep City</h3>
+<p>ใช้ Surf จาก Lilycove ไปทางตะวันออก ผ่าน Route 124 จนถึง Mossdeep City</p>
+<h3>10. Mossdeep City</h3>
+<ul><li>🏢 Space Center — สำรวจได้และมีเหตุการณ์ช่วงหลัง</li><li>🏠 Steven’s House — คุยกับ Steven</li><li>🎣 รับ <b>Super Rod</b> จากบ้านชาวประมง</li></ul>
+<h3>11. Mossdeep Gym</h3>
+<p>Gym ประเภท Psychic ใช้ระบบพื้นและจุดวาร์ป</p>
+<p>🥇 <b>Tate & Liza</b> — Double Battle → <b>Mind Badge</b> + <b>TM04 Calm Mind</b></p>
+<h3>12. HM08 — Dive</h3>
+<p>หลังเหตุการณ์ที่ Mossdeep ไปบ้าน Steven เพื่อรับ <b>HM08 Dive</b></p>
+<h3>13. Route 125 → Shoal Cave</h3>
+<p>สำรวจ Shoal Cave ทั้งช่วง High Tide และ Low Tide เพื่อเก็บไอเทมและ Pokémon ให้ครบ</p>
+</section>
+
+<section id="part5" class="card searchable">
+<h2>Part 5 — Seafloor Cavern → Kyogre</h2>
+<h3>14. Route 127 → Route 128</h3>
+<p>เดินทางลงใต้ ใช้ Surf และ Dive จนพบทางเข้าสู่ Seafloor Cavern</p>
+<h3>15. Seafloor Cavern</h3><div class="map-panel"><div class="map-head"><strong>Seafloor Cavern — แผนที่ทางเดิน</strong><span class="map-tag">DUNGEON</span></div><img src="https://www.guiasnintendo.com/1_GAMEBOY_ADVANCE/Pokemon_Esmeralda/pok_esmeralda_SP/mapas/68_ss_tidal.jpg" alt="Seafloor Cavern — แผนที่ทางเดิน map"><div class="map-caption">ใช้เป็นภาพอ้างอิงห้องและทางเชื่อมภายในช่วง Seafloor Cavern / พื้นที่ที่เกี่ยวข้องกับ S.S. Tidal ตามแผนที่ต้นทาง<br><a class="map-link" href="https://www.guiasnintendo.com/1_GAMEBOY_ADVANCE/Pokemon_Esmeralda/pok_esmeralda_SP/mapas/68_ssmarea.html" target="_blank" rel="noopener">ดูแหล่งที่มาของแผนที่ ↗</a></div><div class="map-focus"><div class="focus"><b>ทางเข้า</b>เริ่มจากพื้นที่ใต้น้ำ</div><div class="focus"><b>ห้องย่อย</b>ตรวจสอบทางวาร์ป/ทางแยก</div><div class="focus"><b>Archie</b>เป้าหมายช่วงท้าย</div></div></div>
+<p>เอาชนะ Team Aqua Grunts และตามหา <b>Archie</b> ที่ส่วนลึกสุด</p>
+<p>⚔️ หลังเอาชนะ Archie เขาจะใช้ Blue Orb ปลุก <b>Kyogre</b> และสภาพอากาศของ Hoenn จะผิดปกติ</p>
+</section>
+
+<section id="part6" class="card searchable">
+<h2>Part 6 — Sootopolis City</h2>
+<h3>16. Route 126 → Sootopolis City</h3>
+<p>ใช้ Dive รอบเกาะเพื่อเข้าสู่ Sootopolis และพบ Groudon กับ Kyogre ต่อสู้กัน</p>
+<h3>17. Cave of Origin</h3>
+<p>พบ Wallace และได้รับภารกิจให้ตามหา <b>Rayquaza</b> เพื่อหยุดการต่อสู้</p>
+<h3>18. Sky Pillar</h3><div class="map-panel"><div class="map-head"><strong>Sky Pillar — แผนที่แต่ละชั้น</strong><span class="map-tag">LEGENDARY</span></div><img src="https://www.guiasnintendo.com/1_GAMEBOY_ADVANCE/Pokemon_Esmeralda/pok_esmeralda_SP/mapas/71_sky_pilar.jpg" alt="Sky Pillar — แผนที่แต่ละชั้น map"><div class="map-caption">เน้นเส้นทางขึ้นแต่ละชั้นและจุดที่ต้องใช้ Mach Bike เพื่อผ่านพื้นแตกร้าว<br><a class="map-link" href="https://www.guiasnintendo.com/1_GAMEBOY_ADVANCE/Pokemon_Esmeralda/pok_esmeralda_SP/mapas/71_pilar_celeste.html" target="_blank" rel="noopener">ดูแหล่งที่มาของแผนที่ ↗</a></div><div class="map-focus"><div class="focus"><b>Route 131</b>ทางเข้า Sky Pillar</div><div class="focus"><b>Mach Bike</b>ใช้ในชั้นที่มีพื้นแตกร้าว</div><div class="focus"><b>Rooftop</b>จุดพบ Rayquaza</div></div></div>
+<p>เดินทาง Route 131 → Sky Pillar ใช้ <b>Mach Bike</b> ข้ามพื้นแตกร้าว ขึ้นถึงยอดแล้วพบ Rayquaza ซึ่งจะบินออกไป</p>
+<h3>19. Rayquaza หยุด Groudon & Kyogre</h3>
+<p>กลับ Sootopolis แล้ว Rayquaza จะหยุดการต่อสู้ ทำให้อากาศกลับปกติ และ Wallace มอบ <b>HM07 Waterfall</b></p>
+<h3>20. Sootopolis Gym</h3>
+<p>Gym ประเภท Water ใช้ Puzzle พื้นน้ำแข็ง</p>
+<p>🥇 <b>Wallace</b> → <b>Rain Badge</b> + <b>TM03 Water Pulse</b></p>
+<div class="success"><b>🏅 ได้ Gym Badge ครบ 8 อันแล้ว!</b></div>
+</section>
+
+<section id="part7" class="card searchable">
+<h2>Part 7 — Ever Grande City → Victory Road</h2>
+<h3>21. Route 128 → Ever Grande City</h3>
+<p>เตรียม Pokémon ที่ใช้ Surf และ Waterfall เดินทางไป Ever Grande City และใช้ Waterfall ขึ้นน้ำตก</p>
+<div class="tip">ก่อน Pokémon League แนะนำให้ซื้อ Full Restore, Revive, Max Potion, Hyper Potion, Full Heal และ Ultra Ball ให้เพียงพอ</div>
+<h3>22. Victory Road</h3><div class="map-panel"><div class="map-head"><strong>Victory Road — แผนที่เส้นทางสู่ League</strong><span class="map-tag">FINAL DUNGEON</span></div><img src="https://www.kindpng.com/picc/m/749-7496294_victoryroad1f-on-pokemon-emerald-victory-road-map-victory.png" alt="Victory Road — แผนที่เส้นทางสู่ League map"><div class="map-caption">ใช้ดูทางแยก จุดขึ้นลง และเส้นทางออกก่อนเข้าสู่ Pokémon League<br><a class="map-link" href="https://gamefaqs.gamespot.com/gba/921905-pokemon-emerald-version/map/13388-victory-road-map" target="_blank" rel="noopener">ดูแหล่งที่มาของแผนที่ ↗</a></div><div class="map-focus"><div class="focus"><b>1F</b>เริ่มเส้นทางหลัก</div><div class="focus"><b>Basement</b>พื้นที่ชั้นล่าง</div><div class="focus"><b>Goal</b>ทางออกสู่ Pokémon League</div><div class="focus"><b>Wally</b>จุดต่อสู้ครั้งสุดท้าย</div></div></div>
+<p>ต้องใช้ Surf, Strength, Rock Smash และ Waterfall มี Trainer และ Pokémon ระดับสูง ระหว่างทางพบ Wally เป็นครั้งสุดท้าย</p>
+</section>
+
+<section id="part8" class="card searchable">
+<h2>Part 8 — Pokémon League</h2>
+<p>แนะนำทีมประมาณ <b>Lv. 50–55+</b> และมีประเภทที่หลากหลาย</p>
+<div class="grid">
+<div class="mini"><strong>24. Sidney</strong>Dark — Fighting / Bug ช่วยได้มาก</div>
+<div class="mini"><strong>25. Phoebe</strong>Ghost — Dark / Ghost</div>
+<div class="mini"><strong>26. Glacia</strong>Ice — Fighting / Electric / Rock / Fire</div>
+<div class="mini"><strong>27. Drake</strong>Dragon — Ice / Dragon</div>
+<div class="mini"><strong>28. Champion Wallace</strong>Water — Electric / Grass</div>
+</div>
+<div class="success"><b>🎉 Hall of Fame</b><br>เอาชนะ Wallace แล้วเข้าสู่ Hall of Fame ถือว่าจบเนื้อเรื่องหลัก แต่เกมยังมี Post-game อีกมาก</div>
+</section>
+
+<section id="part9" class="card searchable">
+<h2>Part 9 — Post-game</h2>
+<h3>29. National Pokédex</h3>
+<p>หลังจบ Pokémon League กลับบ้านที่ Littleroot Town พบแม่และ Professor Birch จากนั้นเริ่มเก็บ National Pokédex</p>
+<h3>30. Latias หรือ Latios</h3>
+<p>รายการโทรทัศน์จะถามสี Pokémon</p>
+<ul><li>🔴 Red → Latias</li><li>🔵 Blue → Latios</li></ul>
+<div class="tip">ตัวที่ไม่ได้เลือกสามารถเข้าถึงผ่าน Eon Ticket / Southern Island ตามเงื่อนไข Event ของยุค</div>
+<h3>31. Battle Frontier</h3>
+<p>มี 7 Facility:</p>
+<ol><li>Battle Tower</li><li>Battle Dome</li><li>Battle Factory</li><li>Battle Arena</li><li>Battle Palace</li><li>Battle Pike</li><li>Battle Pyramid</li></ol>
+<p>เป้าหมายสูงสุดคือ <b>Silver Symbol ×7</b> และ <b>Gold Symbol ×7</b></p>
+</section>
+
+<section id="part10" class="card searchable">
+<h2>Part 10 — Legendary Pokémon</h2>
+<h3>32. Rayquaza</h3>
+<p>กลับ Sky Pillar หลังจบเกม พบ <b>Lv.70</b> เตรียม Ultra Ball / Timer Ball และท่า Sleep หรือ Paralysis แล้วบันทึกเกมก่อนสู้</p>
+<h3>33. Groudon</h3>
+<p>ตรวจ Weather Institute หากพบ <b>Drought</b> ให้ไป Terra Cave และจับ Groudon Lv.70</p>
+<h3>34. Kyogre</h3>
+<p>ตรวจ Weather Institute หากพบ <b>Heavy Rain</b> ให้ไป Marine Cave และจับ Kyogre Lv.70</p>
+<h3>35. Regis</h3>
+<p>ต้องเตรียม <b>Dig, Surf, Dive, Relicanth, Wailord</b></p>
+<p class="route">Sealed Chamber → Ancient Tomb → Regirock → Regice → Registeel</p>
+<h3>36. Regirock</h3><p>Desert Ruins → Puzzle → Regirock Lv.40</p>
+<h3>37. Regice</h3><p>Island Cave, Route 105 → Puzzle → Regice Lv.40</p>
+<h3>38. Registeel</h3><p>Ancient Tomb, Route 120 → Puzzle → Registeel Lv.40</p>
+</section>
+
+<section id="part11" class="card searchable">
+<h2>Part 11 — Pokémon ที่ต้องตามหาเพิ่มเติม</h2>
+<h3>39. Fossil อีกชิ้น</h3>
+<p>หลังจบเกมสามารถตามหา Fossil อีกชิ้นและฟื้นที่ Devon Corporation</p>
+<div class="grid"><div class="mini">Root Fossil → Lileep → Cradily</div><div class="mini">Claw Fossil → Anorith → Armaldo</div></div>
+<h3>40. Safari Zone — Post-game</h3>
+<p>หลังได้ National Pokédex สามารถพบ Pokémon เพิ่มเติม โดยเฉพาะกลุ่มที่เกี่ยวข้องกับ Johto เช่น Girafarig, Houndour, Sunkern และ Mareep ตามพื้นที่/เงื่อนไข</p>
+<h3>41. Altering Cave</h3><p>ในเกมปกติมี Zubat เป็นหลัก ส่วน Pokémon อื่นขึ้นกับ Event พิเศษ</p>
+<h3>42. Desert Underpass</h3><p>บริเวณ Route 114 เป็นพื้นที่สำคัญสำหรับหา <b>Ditto</b> เพื่อ Breeding และ Living Pokédex</p>
+</section>
+
+<section id="part12" class="card searchable">
+<h2>Part 12 — Special Legendary Pokémon</h2>
+<p>บาง Pokémon ต้องใช้ Event / Distribution item ในยุคนั้น ไม่สามารถรับจากตลับ Emerald ปกติเพียงอย่างเดียว</p>
+<div class="grid">
+<div class="mini"><strong>Mew</strong>Faraway Island — Old Sea Map</div>
+<div class="mini"><strong>Deoxys</strong>Birth Island — AuroraTicket</div>
+<div class="mini"><strong>Lugia & Ho-Oh</strong>Navel Rock — MysticTicket</div>
+<div class="mini"><strong>Latias / Latios</strong>Southern Island — Eon Ticket</div>
+</div>
+</section>
+
+<section id="part13" class="card searchable">
+<h2>Part 13 — Battle Frontier 100%</h2>
+<div class="grid">
+<div class="mini"><strong>Battle Tower</strong>ต่อสู้ต่อเนื่องตามกติกามาตรฐาน</div>
+<div class="mini"><strong>Battle Dome</strong>Tournament และเลือกทีมให้เหมาะกับคู่ต่อสู้</div>
+<div class="mini"><strong>Battle Factory</strong>ใช้ Pokémon ที่เกมเตรียมไว้</div>
+<div class="mini"><strong>Battle Arena</strong>ตัดสินจาก Skill / Mind / Body</div>
+<div class="mini"><strong>Battle Palace</strong>Pokémon เลือกท่าเองตาม Nature และสถานการณ์</div>
+<div class="mini"><strong>Battle Pike</strong>เลือกเส้นทางจากห้องหลายรูปแบบ</div>
+<div class="mini"><strong>Battle Pyramid</strong>บริหาร HP / PP / Item / Pokémon ระหว่างสำรวจ</div>
+</div>
+</section>
+
+<section id="part14" class="card searchable">
+<h2>Part 14 — Pokémon Contest</h2>
+<p>มี 5 หมวด: <b>Cool, Beauty, Cute, Smart, Tough</b></p>
+<p>แต่ละหมวดมีระดับ <b>Normal, Super, Hyper, Master</b></p>
+<div class="success">🏆 เป้าหมาย 100%: ชนะ Master Rank ครบทุกประเภทและเก็บ Ribbon ที่เกี่ยวข้อง</div>
+<p>แนะนำให้สร้าง Pokémon สำหรับ Contest โดยเฉพาะ และใช้ Berry ทำ Pokéblock เพื่อเพิ่มความสามารถด้าน Contest</p>
+</section>
+
+<section id="part15" class="card searchable">
+<h2>Part 15 — Secret Base</h2>
+<p>ใช้ <b>TM43 Secret Power</b> เปิดทางเข้าสู่ Secret Base แล้วตกแต่งด้วยตุ๊กตา โต๊ะ เก้าอี้ พรม และของตกแต่งต่าง ๆ</p>
+<p>🎯 100%: สร้าง Base → ตกแต่ง → สะสม Decorations → พบ Secret Base ของ Trainer อื่น</p>
+</section>
+
+<section id="part16" class="card searchable">
+<h2>Part 16 — Mirage Island</h2>
+<p>Mirage Island บริเวณ Route 130 เป็นพื้นที่ที่หาได้ยาก โดยขึ้นกับค่า Pokémon’s Personality Value ที่ตรงกับค่าของวันนั้น</p>
+<p>พบ <b>Wynaut</b> และเก็บ <b>Liechi Berry</b></p>
+</section>
+
+<section id="part17" class="card searchable">
+<h2>Part 17 — Berry & Pokéblock</h2>
+<p>Berry ใช้สำหรับฟื้น HP, แก้สถานะ, ทำ Pokéblock และกิจกรรมต่าง ๆ ในเกม</p>
+<p>นำ Berry ไปทำ <b>Pokéblock</b> เพื่อเพิ่มค่าความสามารถของ Pokémon สำหรับ Contest</p>
+</section>
+
+<section id="part18" class="card searchable">
+<h2>Part 18 — Trainer Rematch</h2>
+<p>Trainer บางคนสามารถ Rematch ได้หลังเดินทางผ่าน Hoenn หลายครั้ง ตรวจสอบผ่านระบบใน <b>PokéNav</b> เพื่อใช้เก็บเงิน, EXP และฝึก Pokémon</p>
+</section>
+
+<section id="part19" class="card searchable">
+<h2>Part 19 — Pokédex 100%</h2>
+<h3>🟢 Level 1 — Hoenn Pokédex</h3>
+<ul><li>เห็น Pokémon ครบ</li><li>จับ Pokémon ครบ</li><li>Starter ครบ</li><li>Fossil Pokémon ครบ</li><li>Legendary ครบ</li><li>Event Pokémon ตามสิทธิ์ที่เข้าถึงได้</li></ul>
+<h3>🟡 Level 2 — National Pokédex</h3>
+<p>เก็บ Pokémon Generation I–III ตามความสามารถของเกม โดยอาศัย Evolution, Breeding, Fishing, Safari Zone, Fossil, Trade และ Event</p>
+<h3>🔴 Level 3 — Game Completion 100%</h3>
+<ul><li>Story + 8 Badges + Elite Four + Champion + Hall of Fame</li><li>Legendary: Rayquaza, Groudon, Kyogre, Regirock, Regice, Registeel, Latias, Latios</li><li>Event: Mew, Deoxys, Lugia, Ho-Oh</li><li>Battle Frontier: Silver ×7 + Gold ×7</li><li>Contest: Master ครบ 5 ประเภท</li><li>Safari Zone, Mirage Island, Secret Base, Berry, Pokéblock</li><li>Trainer Rematch, Fossil ทั้ง 2, Wynaut Egg, Castform, Kecleon, PokéNav</li></ul>
+<div class="warn"><b>หมายเหตุสำคัญ:</b> Pokémon/Event บางตัวไม่สามารถรับได้จาก Emerald เวอร์ชันปกติเพียงตลับเดียว ต้องใช้ Trade, Event หรือการแจก Pokémon ตามระบบของยุคนั้น ดังนั้นควรแยก “100% ภายในตลับ Emerald” กับ “National Pokédex 100% จากหลายเกม/การ Trade”</div>
+</section>
+
+<section id="final" class="card searchable">
+<h2>🏆 FINAL CHECKLIST — Pokémon Emerald 100%</h2>
+<div class="progress-text"><span id="progressText">0 / 0 completed</span></div>
+<div class="progress-wrap"><div id="progress" class="progress"></div></div>
+
+<div class="checklist">
+<h3>เนื้อเรื่อง & เมือง</h3>
+<label><input type="checkbox">Littleroot Town</label>
+<label><input type="checkbox">Oldale Town</label>
+<label><input type="checkbox">Petalburg City</label>
+<label><input type="checkbox">Rustboro City</label>
+<label><input type="checkbox">Dewford Town</label>
+<label><input type="checkbox">Slateport City</label>
+<label><input type="checkbox">Mauville City</label>
+<label><input type="checkbox">Verdanturf Town</label>
+<label><input type="checkbox">Fallarbor Town</label>
+<label><input type="checkbox">Lavaridge Town</label>
+<label><input type="checkbox">Fortree City</label>
+<label><input type="checkbox">Lilycove City</label>
+<label><input type="checkbox">Mossdeep City</label>
+<label><input type="checkbox">Sootopolis City</label>
+<label><input type="checkbox">Ever Grande City</label>
+<label><input type="checkbox">Pokémon League</label>
+
+<h3>Gym Badges</h3>
+<label><input type="checkbox">Stone Badge — Roxanne</label>
+<label><input type="checkbox">Knuckle Badge — Brawly</label>
+<label><input type="checkbox">Dynamo Badge — Wattson</label>
+<label><input type="checkbox">Heat Badge — Flannery</label>
+<label><input type="checkbox">Balance Badge — Norman</label>
+<label><input type="checkbox">Feather Badge — Winona</label>
+<label><input type="checkbox">Mind Badge — Tate & Liza</label>
+<label><input type="checkbox">Rain Badge — Wallace</label>
+
+<h3>HM</h3>
+<label><input type="checkbox">HM01 Cut</label>
+<label><input type="checkbox">HM02 Fly</label>
+<label><input type="checkbox">HM03 Surf</label>
+<label><input type="checkbox">HM04 Strength</label>
+<label><input type="checkbox">HM05 Flash</label>
+<label><input type="checkbox">HM06 Rock Smash</label>
+<label><input type="checkbox">HM07 Waterfall</label>
+<label><input type="checkbox">HM08 Dive</label>
+
+<h3>Legendary</h3>
+<label><input type="checkbox">Regirock</label>
+<label><input type="checkbox">Regice</label>
+<label><input type="checkbox">Registeel</label>
+<label><input type="checkbox">Groudon</label>
+<label><input type="checkbox">Kyogre</label>
+<label><input type="checkbox">Rayquaza</label>
+<label><input type="checkbox">Latias</label>
+<label><input type="checkbox">Latios</label>
+
+<h3>Post-game</h3>
+<label><input type="checkbox">National Pokédex</label>
+<label><input type="checkbox">Battle Frontier</label>
+<label><input type="checkbox">Safari Zone</label>
+<label><input type="checkbox">Mirage Island</label>
+<label><input type="checkbox">Pokémon Contest</label>
+<label><input type="checkbox">Secret Base</label>
+<label><input type="checkbox">Trainer Rematch</label>
+<label><input type="checkbox">Fossil ทั้ง 2</label>
+<label><input type="checkbox">Desert Underpass</label>
+<label><input type="checkbox">Terra Cave</label>
+<label><input type="checkbox">Marine Cave</label>
+
+<h3>Event Pokémon</h3>
+<label><input type="checkbox">Mew</label>
+<label><input type="checkbox">Deoxys</label>
+<label><input type="checkbox">Lugia</label>
+<label><input type="checkbox">Ho-Oh</label>
+<label><input type="checkbox">Jirachi</label>
+<label><input type="checkbox">Celebi</label>
+</div>
+</section>
+
+<footer>Pokémon Emerald — Complete 100% Guide • เว็บคู่มือแบบ Standalone HTML</footer>
+</main>
+</div>
+
+<script>
+const checks=[...document.querySelectorAll('.checklist input[type="checkbox"]')];
+const progress=document.getElementById('progress');
+const progressText=document.getElementById('progressText');
+
+function updateProgress(){
+  const done=checks.filter(c=>c.checked).length;
+  const pct=checks.length ? Math.round(done/checks.length*100) : 0;
+  progress.style.width=pct+'%';
+  progressText.textContent=`${done} / ${checks.length} completed (${pct}%)`;
+  localStorage.setItem('emerald100',JSON.stringify(checks.map(c=>c.checked)));
+}
+const saved=JSON.parse(localStorage.getItem('emerald100')||'[]');
+checks.forEach((c,i)=>{if(saved[i])c.checked=true;c.addEventListener('change',updateProgress)});
+updateProgress();
+
+document.getElementById('search').addEventListener('input',e=>{
+  const q=e.target.value.trim().toLowerCase();
+  document.querySelectorAll('.searchable').forEach(card=>{
+    card.classList.toggle('hidden',q && !card.innerText.toLowerCase().includes(q));
+  });
+});
+
+document.querySelectorAll('#toc a').forEach(a=>{
+  a.addEventListener('click',()=>window.scrollTo({top:document.querySelector(a.getAttribute('href')).offsetTop-15,behavior:'smooth'}));
+});
+</script>
+</body>
+</html>
